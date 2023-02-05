@@ -104,7 +104,7 @@ img {
   width: 1158px;
   padding: 0 15px;
   margin: 0 auto;
-  outline: 2px solid tomato;
+  /* outline: 2px solid tomato; */
 }
 
 /* HEADER BLOCK (for all pages)*/
@@ -147,8 +147,21 @@ img {
   font-size: 16px;
   line-height: 1.5;
 }
+
 .current {
   color: var(--ocean);
+}
+.current::after {
+  
+  content: "";
+  /* position: absolute;
+  bottom: 0; */
+  /* margin-top: 24px; */
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--ocean);
 }
 /* mail-tel */
 .address-list {
@@ -188,6 +201,15 @@ img {
 
 /* index.html/HERO section */
 .hero {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../images/main-page/dark-bg-hero.png),
+    url(../images/main-page/bg-img-hero.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-size: cover; */
+
   background-color: var(--navy-blue);
   text-align: center;
   padding-top: 188px;
@@ -291,13 +313,11 @@ img {
   text-align: center;
   padding-top: 96px;
 }
-.filter-container{
+.filter-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px
-;
-
+  gap: 24px;
 }
 .filter-btn {
   color: var(--iris);
@@ -332,7 +352,6 @@ img {
   border-top: 1px solid transparent;
   padding-left: 16px;
 }
-
 
 .portfolio-caption {
   margin-top: 32px;
