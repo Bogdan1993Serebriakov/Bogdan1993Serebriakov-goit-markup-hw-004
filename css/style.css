@@ -152,8 +152,7 @@ img {
   color: var(--ocean);
 }
 .current::after {
-  
-  content: "";
+  content: '';
   /* position: absolute;
   bottom: 0; */
   /* margin-top: 24px; */
@@ -202,14 +201,14 @@ img {
 /* index.html/HERO section */
 .hero {
   max-width: 1440px;
+  height: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: url(../images/main-page/dark-bg-hero.png),
-    url(../images/main-page/bg-img-hero.png);
+  background-image: radial-gradient(rgba(46, 47, 66, 0.7)),
+  url(../images/main-page/hero.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  /* background-size: cover; */
-
   background-color: var(--navy-blue);
   text-align: center;
   padding-top: 188px;
@@ -238,7 +237,7 @@ img {
 .hero-btn:focus {
   background-color: var(--ocean);
 }
-/* index.html/feature section */
+/* index.html/FEATURE section */
 .feature-list {
   display: flex;
   align-items: flex-start;
@@ -251,12 +250,38 @@ img {
 .feature-item {
   max-width: 264px;
 }
+.feature-item::before {
+  display: block;
+  content: "";
+  height: 112px;
+  width: 264px;
+  background-color: var(--cloud);
+  background-size: 64px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.feature-item:nth-child(1)::before {
+  background-image: url(../images/main-page/antenna.svg);
+}
+.feature-item:nth-child(2)::before {
+background-image: url(../images/main-page/clock.svg);
+}
+.feature-item:nth-child(3)::before {
+  background-image: url(../images/main-page/diagram.svg);
+}
+.feature-item:nth-child(4)::before {
+ background-image: url(../images/main-page/astronaut.svg); 
+}
+
 .feature-caption {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  margin-bottom: 8px;
+  margin-top: 8px;
+}
+.feature-text {
+margin-top: 8px;
 }
 /* index.html/examples section */
 .examples {
