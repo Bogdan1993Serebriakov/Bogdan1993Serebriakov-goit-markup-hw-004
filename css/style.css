@@ -256,6 +256,7 @@ img {
   height: 112px;
   width: 264px;
   background-color: var(--cloud);
+  border-radius: 4px;
   background-size: 64px;
   background-repeat: no-repeat;
   background-position: center;
