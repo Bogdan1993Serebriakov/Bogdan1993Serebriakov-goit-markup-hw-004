@@ -18,7 +18,7 @@ body {
   font-family: Roboto, sans-serif;
   letter-spacing: 0.02em;
 }
-/* RESET */
+/* RESET------------------------------------------------------------------------------------ */
 h1,
 h2,
 h3,
@@ -45,7 +45,8 @@ img {
   max-width: 100%;
   height: auto;
 }
-/* COMMON BLOCK ----------------- */
+/* END RESET-------------------------------------------------------------------------------- */
+/* COMMON BLOCK ---------------------------------------------------------------------------- */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -59,7 +60,8 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-/* Title */
+/* END COMMON BLOCK------------------------------------------------------------------------ */
+/* TITLE ----------------------------------------------------------------------------------*/
 .title {
   color: var(--navy-blue);
   font-weight: 500;
@@ -67,7 +69,7 @@ img {
   line-height: 1.2;
   letter-spacing: 0.02em;
 }
-/* title examples title and team title index.html */
+/* title examples title and team title index.html------------------------------------------ */
 .examples-title,
 .team-title,
 .customers-title {
@@ -90,7 +92,8 @@ img {
 .logo-header {
   margin-right: 76px;
 }
-/* btn (for all pages) */
+/* --------------------------------------------------------------------------------------- */
+/* BTN (for all pages) --------------------------------------------------------------------*/
 .btn {
   cursor: pointer;
   font-family: inherit;
@@ -107,8 +110,8 @@ img {
   margin: 0 auto;
   /* outline: 2px solid tomato; */
 }
-
-/* HEADER BLOCK (for all pages)*/
+/* ------------------------------------------------------------------------------------- */
+/* HEADER BLOCK (FOR ALL PAGES)----------------------------------------------------------*/
 /* .header {
   padding-top: 24px;
   padding-bottom: 24px;
@@ -138,7 +141,8 @@ img {
   padding-top: 24px;
   padding-bottom: 24px;
 }
-/* studio-portfolio-contacts */
+/* ------------------------------------------------------------------------------- */
+/* studio-portfolio-contacts (NAV HEADER AND ADDRESS) ------------------------------*/
 .header-nav {
   margin-right: auto;
 }
@@ -179,15 +183,19 @@ img {
 .address-link:focus {
   color: var(--ocean);
 }
-
-/* FOOTER BLOCK (for all pages)*/
+/* ------------------------------------------------------------------------------------------- */
+/* FOOTER BLOCK (FOR ALL PAGES)--------------------------------------------------------------*/
 .footer {
   color: var(--cornflower);
   background-color: var(--navy-blue);
   padding-top: 100px;
   padding-bottom: 100px;
 }
-
+.footer-box {
+  display: flex;
+  align-items: baseline;
+  gap: 120px;
+}
 .footer-web-logo {
   color: var(--iris);
 }
@@ -198,8 +206,44 @@ img {
   margin-top: 16px;
   width: 264px;
 }
+.footer-sm-box {
+  max-width: 208px;
+}
+.sm-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  padding-bottom: 16px;
+}
+.sm-footer-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.sm-footer-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  fill: var(--cloud);
+}
+.sm-footer-link:hover,
+.sm-footer-link:focus {
+  background-color: var(--green);
+}
+/* .sm-footer-icons {
+  fill: var(--cloud);
+} */
 
-/* index.html/HERO section */
+/* --------------------------------------------------------------------------------------- */
+/* index.html/HERO section ------------------------------------------------------------- */
 .hero {
   max-width: 1440px;
   height: 600px;
@@ -241,7 +285,8 @@ img {
 .hero-btn:focus {
   background-color: var(--ocean);
 }
-/* index.html/FEATURE section */
+/* ------------------------------------------------------------------------------------ */
+/* index.html/FEATURE section ---------------------------------------------------------*/
 .feature-list {
   display: flex;
   align-items: flex-start;
@@ -288,19 +333,21 @@ img {
 .feature-text {
   margin-top: 8px;
 }
-/* index.html/examples section */
+/* ------------------------------------------------------------------------ */
+/* index.html/examples section -----------------------------------------------*/
 .examples {
   margin-top: 120px;
 }
 .examples-title {
-  margin-bottom: 72px;
+  padding-bottom: 72px;
 }
 .examples-list {
   display: flex;
   align-items: center;
   gap: 24px;
 }
-/* index.html/TEAM section */
+/* ------------------------------------------------------------------------ */
+/* index.html/TEAM section--------------------------------------------------- */
 /* .team-title {
   padding-bottom: 72px;
 } */
@@ -349,7 +396,12 @@ img {
   justify-content: center;
   gap: 24px;
 }
-
+/* .sm-icons-item {
+   width: 40px;
+  height: 40px;
+  background-color: var(--iris);
+  border-radius: 50%;
+} */
 .sm-link {
   display: flex;
   align-items: center;
@@ -358,23 +410,25 @@ img {
   height: 40px;
   background-color: var(--iris);
   border-radius: 50%;
-}
-.sm-link:hover, .sm-link:focus {
-  background-color: var(--ocean);
-}
-.sm-icons {
   fill: var(--cloud);
 }
-/* ----------------------------------------- */
+.sm-link:hover,
+.sm-link:focus {
+  background-color: var(--ocean);
+}
+/* .sm-icons {
+  fill: var(--cloud);
+} */
+/* ---------------------------------------------------------------------------------- */
 
-/* index.html / Custumers section */
+/* index.html / Custumers section------------------------------------------------------ */
 .customers-section {
   padding-bottom: 120px;
 }
 .customers-title {
   padding-top: 120px;
 }
-.costomers-logo-box{
+.costomers-logo-box {
   padding-top: 72px;
 }
 .customers-list {
@@ -396,20 +450,20 @@ img {
   fill: var(--light-slate);
 }
 
-.customers-link:hover .customers-icons{
+.customers-link:hover .customers-icons {
   fill: var(--ocean);
 }
 .customers-link:focus .customers-icons {
   fill: var(--ocean);
 }
-.customers-link:hover, .customers-link:focus {
+.customers-link:hover,
+.customers-link:focus {
   border: 1px solid var(--ocean);
 }
 
+/* ------------------------------------------------------------------------------- */
 
-/* ------------------------------------------ */
-
-/* porfolio.html/btn-filter portfolio block */
+/* porfolio.html/btn-filter portfolio block -----------------------------------------*/
 .filter {
   text-align: center;
   padding-top: 96px;
@@ -447,11 +501,16 @@ img {
 .portfolio-item {
   width: 360px;
 }
+
 .portfolio-wrapper {
   background: var(--white);
   border: 1px solid #e7e9fc;
   border-top: 1px solid transparent;
   padding-left: 16px;
+}
+.portfolio-wrapper:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-caption {
