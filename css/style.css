@@ -69,7 +69,8 @@ img {
 }
 /* title examples title and team title index.html */
 .examples-title,
-.team-title {
+.team-title,
+.customers-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.1;
@@ -204,8 +205,11 @@ img {
   height: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: radial-gradient(rgba(46, 47, 66, 0.7)),
-  url(../images/main-page/hero.jpg);
+  background-image: radial-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/main-page/hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -252,7 +256,7 @@ img {
 }
 .feature-item::before {
   display: block;
-  content: "";
+  content: '';
   height: 112px;
   width: 264px;
   background-color: var(--cloud);
@@ -265,13 +269,13 @@ img {
   background-image: url(../images/main-page/antenna.svg);
 }
 .feature-item:nth-child(2)::before {
-background-image: url(../images/main-page/clock.svg);
+  background-image: url(../images/main-page/clock.svg);
 }
 .feature-item:nth-child(3)::before {
   background-image: url(../images/main-page/diagram.svg);
 }
 .feature-item:nth-child(4)::before {
- background-image: url(../images/main-page/astronaut.svg); 
+  background-image: url(../images/main-page/astronaut.svg);
 }
 
 .feature-caption {
@@ -282,7 +286,7 @@ background-image: url(../images/main-page/clock.svg);
   margin-top: 8px;
 }
 .feature-text {
-margin-top: 8px;
+  margin-top: 8px;
 }
 /* index.html/examples section */
 .examples {
@@ -296,9 +300,12 @@ margin-top: 8px;
   align-items: center;
   gap: 24px;
 }
-/* index.html/team section */
+/* index.html/TEAM section */
 /* .team-title {
   padding-bottom: 72px;
+} */
+/* .team {
+  margin-bottom: 120px;
 } */
 .team-item {
   width: 264px;
@@ -332,6 +339,74 @@ margin-top: 8px;
 .team-caption {
   margin-bottom: 8px;
 }
+.team-text {
+  margin-bottom: 8px;
+}
+
+.sm-icons-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.sm-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--iris);
+  border-radius: 50%;
+}
+.sm-link:hover, .sm-link:focus {
+  background-color: var(--ocean);
+}
+.sm-icons {
+  fill: var(--cloud);
+}
+/* ----------------------------------------- */
+
+/* index.html / Custumers section */
+.customers-section {
+  padding-bottom: 120px;
+}
+.customers-title {
+  padding-top: 120px;
+}
+.costomers-logo-box{
+  padding-top: 72px;
+}
+.customers-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+.customers-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 168px;
+  height: 88px;
+  border: 1px solid var(--light-slate);
+  border-radius: 4px;
+}
+.customers-icons {
+  fill: var(--light-slate);
+}
+
+.customers-link:hover .customers-icons{
+  fill: var(--ocean);
+}
+.customers-link:focus .customers-icons {
+  fill: var(--ocean);
+}
+.customers-link:hover, .customers-link:focus {
+  border: 1px solid var(--ocean);
+}
+
+
 /* ------------------------------------------ */
 
 /* porfolio.html/btn-filter portfolio block */
