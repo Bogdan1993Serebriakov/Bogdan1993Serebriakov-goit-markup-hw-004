@@ -117,7 +117,7 @@ img {
   padding-bottom: 24px;
 } */
 .header {
-  border: 1px solid var(--cornflower);
+  border-bottom: 1px solid var(--cornflower);
 }
 .header-container {
   display: flex;
@@ -151,6 +151,8 @@ img {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
+  position: relative;
+  
 }
 
 .current {
@@ -158,14 +160,13 @@ img {
 }
 .current::after {
   content: '';
-  /* position: absolute;
-  bottom: 0; */
-  /* margin-top: 24px; */
   display: block;
   width: 100%;
   height: 4px;
   border-radius: 2px;
   background-color: var(--ocean);
+  position: absolute;
+  bottom: -1px;
 }
 /* mail-tel */
 .address-list {
@@ -229,7 +230,6 @@ img {
   width: 40px;
   height: 40px;
   background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border: 1px solid rgba(0, 0, 0, 0.25);
   border-radius: 50%;
   fill: var(--cloud);
@@ -293,8 +293,9 @@ img {
   flex-wrap: wrap;
   gap: 24px;
 }
-.feature {
+.section {
   padding-top: 120px;
+  padding-bottom: 120px;
 }
 .feature-item {
   max-width: 264px;
@@ -336,10 +337,10 @@ img {
 /* ------------------------------------------------------------------------ */
 /* index.html/examples section -----------------------------------------------*/
 .examples {
-  margin-top: 120px;
+  padding-top: 0;
 }
 .examples-title {
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 .examples-list {
   display: flex;
@@ -360,7 +361,6 @@ img {
 
 .team {
   background-color: var(--cloud);
-  margin-top: 120px;
   padding-top: 120px;
   padding-bottom: 120px;
 }
@@ -396,19 +396,16 @@ img {
   justify-content: center;
   gap: 24px;
 }
-/* .sm-icons-item {
+.sm-icons-item {
   width: 40px;
   height: 40px;
-} */
+}
 .sm-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* width: 100%;
-  height: 100%; */
-  width: 40px;
-  height: 40px;
-
+  width: 100%;
+  height: 100%;
   background-color: var(--iris);
   border-radius: 50%;
   fill: var(--cloud);
@@ -423,14 +420,8 @@ img {
 /* ---------------------------------------------------------------------------------- */
 
 /* index.html / Custumers section------------------------------------------------------ */
-.customers-section {
-  padding-bottom: 120px;
-}
-.customers-title {
-  padding-top: 120px;
-}
 .costomers-logo-box {
-  padding-top: 72px;
+  margin-top: 72px;
 }
 .customers-list {
   display: flex;
@@ -465,15 +456,15 @@ img {
 /* ------------------------------------------------------------------------------- */
 
 /* porfolio.html/btn-filter portfolio block -----------------------------------------*/
-.filter {
-  text-align: center;
-  padding-top: 96px;
-}
-.filter-container {
+
+.filter-list {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 24px;
+  /* відступ між елементами */
+  margin-top: 96px;
+  margin-bottom: 72px;
 }
 .filter-btn {
   color: var(--iris);
@@ -497,27 +488,29 @@ img {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 24px;
+  row-gap: 48px;
+  column-gap: 24px;
+  padding-bottom: 120px;
 }
 .portfolio-item {
   width: 360px;
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus {
+  display: block;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-wrapper {
   background: var(--white);
   border: 1px solid #e7e9fc;
   border-top: 1px solid transparent;
+  padding-top: 32px;
+  padding-bottom: 32px;
   padding-left: 16px;
-}
-.portfolio-wrapper:hover {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}
-
-.portfolio-caption {
-  margin-top: 32px;
 }
 .portfolio-text {
   margin-top: 8px;
-  padding-bottom: 32px;
 }
