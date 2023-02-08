@@ -300,28 +300,14 @@ img {
 .feature-item {
   max-width: 264px;
 }
-.feature-item::before {
-  display: block;
-  content: '';
+.thumb-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 112px;
   width: 264px;
   background-color: var(--cloud);
   border-radius: 4px;
-  background-size: 64px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.feature-item:nth-child(1)::before {
-  background-image: url(../images/main-page/antenna.svg);
-}
-.feature-item:nth-child(2)::before {
-  background-image: url(../images/main-page/clock.svg);
-}
-.feature-item:nth-child(3)::before {
-  background-image: url(../images/main-page/diagram.svg);
-}
-.feature-item:nth-child(4)::before {
-  background-image: url(../images/main-page/astronaut.svg);
 }
 
 .feature-caption {
